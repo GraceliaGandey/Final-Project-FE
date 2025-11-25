@@ -3,14 +3,14 @@
     {
       "id": "1",
       "name": "Red Velvet",
-      "description": "Kue beludru merah",
+      "description": "Kue beludru merah.",
       "price": 230000,
       "imageUrl": "/red-velvet.jpg"
     },
     {
       "id": "2",
       "name": "Chocolate Lava",
-      "description": "Cokelat lezat",
+      "description": "Cokelat lezat.",
       "price": 270000,
       "imageUrl": "/chocolate-lava.jpg"
     },
@@ -25,13 +25,13 @@
       "id": "4",
       "name": "Tiramisu Cake",
       "description": "Memiliki tekstur lembut, perpaduan kopi, keju mascarpone, dan sedikit rasa pahit dari kakao.",
-      "price": 225000,
+      "price": 235000,
       "imageUrl": "https://bakewithzoha.com/wp-content/uploads/2023/12/tiramisu-cheesecake-sliced-1-scaled.jpg"
     },
     {
-      "id": "c9c1",
+      "id": "5",
       "name": "cheesecake",
-      "description": "Kue dengan cita rasa gurih dan manis",
+      "description": "Kue dengan cita rasa gurih dan manis.",
       "price": 250000,
       "imageUrl": "https://recipessmile.com/wp-content/uploads/2025/05/Creamy-Baked-Cheesecake.png"
     }
