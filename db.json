@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Red Velvet",
       "description": "Kue beludru merah.",
-      "price": 230000,
+      "price": 235000,
       "imageUrl": "/red-velvet.jpg"
     },
     {
@@ -29,10 +29,10 @@
       "imageUrl": "https://bakewithzoha.com/wp-content/uploads/2023/12/tiramisu-cheesecake-sliced-1-scaled.jpg"
     },
     {
-      "id": "5",
+      "id": "5aa",
       "name": "cheesecake",
       "description": "Kue dengan cita rasa gurih dan manis.",
-      "price": 250000,
+      "price": 255000,
       "imageUrl": "https://recipessmile.com/wp-content/uploads/2025/05/Creamy-Baked-Cheesecake.png"
     }
   ],

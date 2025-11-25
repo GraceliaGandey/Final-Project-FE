@@ -2,8 +2,8 @@
 
 // URL Endpoints dari JSON Server yang berjalan di port 5000
 const CAKES_API_URL = 'http://localhost:5000/cakes';
-const CUSTOMERS_API_URL = 'http://localhost:5000/customers'; // URL baru
-const ORDERS_API_URL = 'http://localhost:5000/orders';       // URL baru
+const CUSTOMERS_API_URL = 'http://localhost:5000/customers'; 
+const ORDERS_API_URL = 'http://localhost:5000/orders';       
 
 // =======================================================
 //                    CAKES CRUD (Diperbaiki)
@@ -39,13 +39,10 @@ export const addCake = async (newCake) => {
 
 /**
  * Memperbarui data kue berdasarkan ID.
- * Menggunakan Number(id) untuk mengatasi masalah tipe data ID yang gagal diubah.
  */
 export const updateCake = async (id, updatedData) => {
-  // ✅ PERUBAHAN UTAMA: Konversi ID ke Number
-  const numericId = Number(id); 
-  
-  const response = await fetch(`${CAKES_API_URL}/${numericId}`, {
+  // ✅ PERBAIKAN: GUNAKAN ID (string) SECARA LANGSUNG
+  const response = await fetch(`${CAKES_API_URL}/${id}`, { 
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -60,13 +57,10 @@ export const updateCake = async (id, updatedData) => {
 
 /**
  * Menghapus kue berdasarkan ID.
- * Menggunakan Number(id) untuk mengatasi masalah tipe data ID yang gagal dihapus.
  */
 export const deleteCake = async (id) => {
-  // ✅ PERUBAHAN UTAMA: Konversi ID ke Number
-  const numericId = Number(id); 
-  
-  const response = await fetch(`${CAKES_API_URL}/${numericId}`, {
+  // ✅ PERBAIKAN: GUNAKAN ID (string) SECARA LANGSUNG
+  const response = await fetch(`${CAKES_API_URL}/${id}`, {
     method: 'DELETE',
   });
   if (!response.ok) { 
@@ -75,7 +69,7 @@ export const deleteCake = async (id) => {
 };
 
 // =======================================================
-//               CUSTOMERS & ORDERS (BARU DITAMBAHKAN)
+//                CUSTOMERS & ORDERS (READ ONLY)
 // =======================================================
 
 /**
