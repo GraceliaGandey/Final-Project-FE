@@ -18,14 +18,14 @@
       "id": "3",
       "name": "Lemon Tart Klasik",
       "description": "Tart lemon segar dengan meringue manis.",
-      "price": 225000,
+      "price": 220000,
       "imageUrl": "/Lemon-Tart.jpg"
     },
     {
       "id": "4",
       "name": "Tiramisu Cake",
       "description": "Memiliki tekstur lembut, perpaduan kopi, keju mascarpone, dan sedikit rasa pahit dari kakao.",
-      "price": 220000,
+      "price": 225000,
       "imageUrl": "https://bakewithzoha.com/wp-content/uploads/2023/12/tiramisu-cheesecake-sliced-1-scaled.jpg"
     },
     {
@@ -38,13 +38,13 @@
   ],
   "customers": [
     {
-      "id": 101,
+      "id": "101",
       "name": "Joko Susilo",
       "email": "joko.susilo@example.com",
       "city": "Jakarta"
     },
     {
-      "id": 102,
+      "id": "102",
       "name": "Siti Nurhaliza",
       "email": "siti.n@example.com",
       "city": "Bandung"
@@ -52,7 +52,7 @@
   ],
   "orders": [
     {
-      "id": 501,
+      "id": "501",
       "customerId": 101,
       "cakeName": "Red Velvet",
       "quantity": 2,
@@ -61,7 +61,7 @@
       "orderDate": "2025-11-20"
     },
     {
-      "id": 502,
+      "id": "502",
       "customerId": 102,
       "cakeName": "Chocolate Lava",
       "quantity": 1,
