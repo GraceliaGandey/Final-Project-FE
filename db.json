@@ -68,6 +68,33 @@
       "totalPrice": 300000,
       "status": "Pending",
       "orderDate": "2025-11-23"
+    },
+    {
+      "id": "655f",
+      "customerId": "999",
+      "cakeName": "Red Velvet (1x), Chocolate Lava (1x)",
+      "quantity": 2,
+      "totalPrice": 505000,
+      "status": "Pending",
+      "orderDate": "2025-11-26"
+    },
+    {
+      "id": "84dd",
+      "customerId": "999",
+      "cakeName": "Chocolate Lava (1x)",
+      "quantity": 1,
+      "totalPrice": 270000,
+      "status": "Pending",
+      "orderDate": "2025-11-26"
+    },
+    {
+      "id": "a850",
+      "customerId": "999",
+      "cakeName": "Chocolate Lava (1x)",
+      "quantity": 1,
+      "totalPrice": 270000,
+      "status": "Pending",
+      "orderDate": "2025-11-26"
     }
   ]
 }

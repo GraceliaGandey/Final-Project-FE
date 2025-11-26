@@ -6,7 +6,7 @@ const CUSTOMERS_API_URL = 'http://localhost:5000/customers';
 const ORDERS_API_URL = 'http://localhost:5000/orders';       
 
 // =======================================================
-//                    CAKES CRUD (Diperbaiki)
+//                    CAKES CRUD (Manajemen Admin)
 // =======================================================
 
 /**
@@ -39,9 +39,11 @@ export const addCake = async (newCake) => {
 
 /**
  * Memperbarui data kue berdasarkan ID.
+ * Menggunakan ID (bertipe string) secara langsung, mendukung ID angka (misal "1")
+ * maupun ID alfanumerik (misal "5aa").
  */
 export const updateCake = async (id, updatedData) => {
-  // ✅ PERBAIKAN: GUNAKAN ID (string) SECARA LANGSUNG
+  // ✅ PENTING: ID (string) digunakan langsung
   const response = await fetch(`${CAKES_API_URL}/${id}`, { 
     method: 'PUT',
     headers: {
@@ -57,9 +59,10 @@ export const updateCake = async (id, updatedData) => {
 
 /**
  * Menghapus kue berdasarkan ID.
+ * Menggunakan ID (bertipe string) secara langsung.
  */
 export const deleteCake = async (id) => {
-  // ✅ PERBAIKAN: GUNAKAN ID (string) SECARA LANGSUNG
+  // ✅ PENTING: ID (string) digunakan langsung
   const response = await fetch(`${CAKES_API_URL}/${id}`, {
     method: 'DELETE',
   });
@@ -69,7 +72,7 @@ export const deleteCake = async (id) => {
 };
 
 // =======================================================
-//                CUSTOMERS & ORDERS (READ ONLY)
+//                CUSTOMERS & ORDERS (Manajemen Data)
 // =======================================================
 
 /**
@@ -90,6 +93,23 @@ export const getOrders = async () => {
   const response = await fetch(ORDERS_API_URL);
   if (!response.ok) { 
     throw new Error(`Gagal mengambil data pesanan. Status: ${response.status}`); 
+  }
+  return response.json();
+};
+
+/**
+ * Menambahkan pesanan baru ke API (Digunakan untuk fitur Checkout).
+ */
+export const addOrder = async (newOrder) => {
+  const response = await fetch(ORDERS_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newOrder),
+  });
+  if (!response.ok) { 
+    throw new Error(`Gagal menambahkan pesanan baru. Status: ${response.status}`); 
   }
   return response.json();
 };
